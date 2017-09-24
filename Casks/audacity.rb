@@ -10,5 +10,6 @@ cask 'audacity' do
 
   app 'Audacity.app'
 
-  zap delete: '~/Library/Application Support/audacity'
+  uninstall pkgutil: ['com.sourceforge.audacity.ffmpegLibrariesForAudacity.pkg', 'com.sourceforge.audacity.lameLibraryForAudacity.pkg'],
+            delete: '~/Library/Application Support/audacity'
 end
