@@ -1,6 +1,6 @@
 cask 'audacity' do
   version '2.1.3'
-  sha256 '68e82a944a9aa29068e2a2faa4cbd85f909d48f3916e6a57983d14f605d88b5d'
+  sha256 '6788df1e8e7c494c5cfbc64e3c7417ac6a73591df343fc1e21c8040ecee30dda'
 
   url "https://www.fosshub.com/Audacity.html/audacity-macos-#{version}.dmg"
   name 'Audacity'
