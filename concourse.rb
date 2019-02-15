@@ -23,6 +23,42 @@ class Concourse < Formula
     bin.install 'concourse'
   end
 
+  def post_install
+    (var/"log").mkpath
+    (var/"concourse").mkpath
+  end
+
+  def plist; <<~EOS
+    <?xml version="1.0" encoding="UTF-8"?>
+    <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+    <plist version="1.0">
+    <dict>
+      <key>KeepAlive</key>
+      <true/>
+      <key>Label</key>
+      <string>#{plist_name}</string>
+      <key>ProgramArguments</key>
+      <array>
+        <string>#{opt_bin}/concourse</string>
+        <string>quickstart</string>
+        <string>--add-local-user=admin:admin</string>
+        <string>--main-team-local-user=admin</string>
+        <string>--external-url=http://concourse.local</string>
+        <string>--worker-work-dir=#{var}/concourse</string>
+      </array>
+      <key>StandardOutPath</key>
+        <string>#{var}/log/concourse.log</string>
+      <key>StandardErrorPath</key>
+        <string>#{var}/log/concourse.log</string>
+      <key>RunAtLoad</key>
+      <true/>
+      <key>WorkingDirectory</key>
+      <string>#{HOMEBREW_PREFIX}</string>
+    </dict>
+    </plist>
+  EOS
+  end
+
   test do
     system "#{bin}/concourse"
   end
