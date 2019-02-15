@@ -16,12 +16,11 @@ class Concourse < Formula
 
   def install
     if OS.mac?
-      bin.install 'concourse_darwin_amd64'
-      mv "bin/concourse_darwin_amd64", "bin/concourse"
+      mv "concourse_darwin_amd64", "concourse"
     elsif OS.linux?
-      bin.install 'concourse_linux_amd64'
-      mv "bin/concourse_linux_amd64", "bin/concourse"
+      mv "concourse_linux_amd64", "concourse"
     end
+    bin.install 'concourse'
   end
 
   test do
