@@ -41,7 +41,6 @@ class Concourse < Formula
       <array>
         <string>#{opt_bin}/concourse</string>
         <string>quickstart</string>
-        <string>--add-local-user=user:pass</string>
         <string>--main-team-allow-all-users</string>
         <string>--postgres-database=postgres</string>
         <string>--worker-work-dir=#{var}/concourse</string>
