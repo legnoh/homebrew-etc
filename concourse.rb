@@ -15,7 +15,12 @@ class Concourse < Formula
   depends_on :arch => :x86_64
 
   def install
-    bin.install 'concourse_darwin_amd64'
+    if OS.mac?
+      inreplace "path", "concourse_darwin_amd64", "concourse"
+    elsif OS.linux?
+      inreplace "path", "concourse_linux_amd64", "concourse"
+    end
+    bin.install 'concourse'
   end
 
   test do
