@@ -16,6 +16,7 @@ class Concourse < Formula
 
   def install
     bin.install 'concourse'
+  end
 
   test do
     system "#{bin}/concourse"
