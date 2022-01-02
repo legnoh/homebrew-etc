@@ -8,7 +8,7 @@ cask 'eid-jp-mynaportal' do
     name 'eID Japan MyNumberPortal Client'
     homepage 'https://myna.go.jp/'
   
-    depends_on macos: '>= 10.11.6'
+    depends_on macos: '>= :el_capitan'
   
     pkg 'MynaPortalAppSetup.pkg'
   
