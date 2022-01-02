@@ -12,5 +12,8 @@ cask 'eid-jp-mynaportal' do
   
     pkg 'MynaPortalAppSetup.pkg'
   
-    uninstall pkgutil: 'jp.go.cao.mpa'
+    uninstall pkgutil: [
+      'jp.go.cao.mpa',
+      'jp.go.cao.mpa.mpaSafariAppExtension',
+    ]
 end
