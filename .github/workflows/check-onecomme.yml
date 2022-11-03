@@ -17,11 +17,11 @@ jobs:
       uses: actions/checkout@v3
     - name: Prepare
       run: |
-          curl -LO "https://github.com/ericchiang/pup/releases/download/v0.4.0/pup_v0.4.0_linux_amd64.zip"
-          unzip -qq pup_v0.4.0_linux_amd64.zip
+          curl -L -o /tmp/pup.zip "https://github.com/ericchiang/pup/releases/download/v0.4.0/pup_v0.4.0_linux_amd64.zip"
+          unzip -qq -d /tmp pup_v0.4.0_linux_amd64.zip
     - name: Check latest version
       run: |
-          latest_version=$(curl -s "https://onecomme.com/" | ./pup 'p.version_FnRn > strong text{}' | tail -n 1)
+          latest_version=$(curl -s "https://onecomme.com/" | /tmp/pup 'p.version_FnRn > strong text{}' | tail -n 1)
           echo "latest version: ${latest_version}"
           echo "latest_version=${latest_version}" >> $GITHUB_ENV
     - name: Check cask version
@@ -33,11 +33,11 @@ jobs:
       if: env.latest_version != env.cask_version
       run: |
         # replace version name
-        sed -i "s/${cask_version}.\*/${latest_version}.\*/g" "./Casks/${CASK_ID}.rb"
+        sed -i "s/${cask_version}/${latest_version}/g" "./Casks/${CASK_ID}.rb"
     - name: Create Pull Request
       uses: peter-evans/create-pull-request@v3
       if: env.latest_version != env.cask_version
       with:
         delete-branch: true
-        title: Update ${CASK_NAME} to ${{ env.latest_version }}
-        commit-message: Update ${CASK_NAME} to ${{ env.latest_version }}
+        title: Update ${{ env.CASK_NAME }} to ${{ env.latest_version }}
+        commit-message: Update ${{ env.CASK_NAME }} to ${{ env.latest_version }}
