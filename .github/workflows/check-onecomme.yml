@@ -14,7 +14,7 @@ jobs:
       CASK_ID: onecomme
     steps:
     - name: check
-      run: pwd
+      run: ls -al
     - name: Prepare
       run: |
           curl -LO "https://github.com/ericchiang/pup/releases/download/v0.4.0/pup_v0.4.0_linux_amd64.zip"
@@ -22,16 +22,18 @@ jobs:
     - name: Check latest version
       run: |
           latest_version=$(curl -s "https://onecomme.com/" | ./pup 'p.version_FnRn > strong text{}' | tail -n 1)
+          echo "latest version: ${latest_version}"
           echo "latest_version=${latest_version}" >> $GITHUB_ENV
     - name: Check cask version
       run: |
-          cask_version=$(grep -oE "[0-9]+(\.[0-9]+){1,2}" "Casks/${CASK_ID}.rb" | head -n 1)
+          cask_version=$(grep -oE "[0-9]+(\.[0-9]+){1,2}" "./Casks/${CASK_ID}.rb" | head -n 1)
+          echo "cask version: ${cask_version}"
           echo "cask_version=${cask_version}" >> $GITHUB_ENV
     - name: Replace
       if: env.latest_version != env.cask_version
       run: |
         # replace version name
-        sed -i "s/${cask_version}.\*/${latest_version}.\*/g" "Casks/${CASK_ID}.rb"
+        sed -i "s/${cask_version}.\*/${latest_version}.\*/g" "./Casks/${CASK_ID}.rb"
     - name: Create Pull Request
       uses: peter-evans/create-pull-request@v3
       if: env.latest_version != env.cask_version
