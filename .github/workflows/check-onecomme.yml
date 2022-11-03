@@ -33,5 +33,5 @@ jobs:
       if: env.latest_version != env.cask_version
       with:
         delete-branch: true
-        title: Update  to ${{ env.latest_version }}
+        title: Update ${CASK_NAME} to ${{ env.latest_version }}
         commit-message: Update ${CASK_NAME} to ${{ env.latest_version }}
