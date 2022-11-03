@@ -14,7 +14,7 @@ jobs:
       CASK_ID: onecomme
     steps:
     - name: Prepare
-      run: apt -y install pup
+      run: sudo apt -y install pup
     - name: Check latest version
       run: |
           latest_version=$(curl -s "https://onecomme.com/" | pup 'p.version_FnRn > strong text{}' | tail -n 1)
