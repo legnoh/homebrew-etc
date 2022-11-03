@@ -14,10 +14,12 @@ jobs:
       CASK_ID: onecomme
     steps:
     - name: Prepare
-      run: sudo apt -y install pup
+      run: |
+          curl -LO "https://github.com/ericchiang/pup/releases/download/v0.4.0/pup_v0.4.0_linux_amd64.zip"
+          unzip -qq pup_v0.4.0_linux_amd64.zip
     - name: Check latest version
       run: |
-          latest_version=$(curl -s "https://onecomme.com/" | pup 'p.version_FnRn > strong text{}' | tail -n 1)
+          latest_version=$(curl -s "https://onecomme.com/" | ./pup 'p.version_FnRn > strong text{}' | tail -n 1)
           echo "latest_version=${latest_version}" >> $GITHUB_ENV
     - name: Check cask version
       run: |
