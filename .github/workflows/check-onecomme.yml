@@ -18,7 +18,7 @@ jobs:
     - name: Prepare
       run: |
           curl -L -o /tmp/pup.zip "https://github.com/ericchiang/pup/releases/download/v0.4.0/pup_v0.4.0_linux_amd64.zip"
-          unzip -qq -d /tmp pup_v0.4.0_linux_amd64.zip
+          unzip -qq -d /tmp /tmp/pup.zip
     - name: Check latest version
       run: |
           latest_version=$(curl -s "https://onecomme.com/" | /tmp/pup 'p.version_FnRn > strong text{}' | tail -n 1)
