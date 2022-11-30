@@ -3,7 +3,7 @@ cask 'dotec-deegate' do
     sha256 :no_check
   
     url "https://dotec-audio.com/release/?p=DeeGate&o=mac"
-    name 'OneComme'
+    name 'Dotec DeeGate'
     homepage 'https://dotec-audio.com/deegate.html'
   
     pkg "install.pkg"
