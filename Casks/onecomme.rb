@@ -6,7 +6,7 @@ cask 'onecomme' do
     name 'OneComme'
     homepage 'https://onecomme.com/'
   
-    pkg "OneCommeSetup-x64-#{version}.pkg"
+    pkg "OneCommeSetup-#{version}.pkg"
   
     uninstall pkgutil: 'dog.astie.live-comment-viewer'
 end
