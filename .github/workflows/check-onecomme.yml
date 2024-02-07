@@ -35,7 +35,7 @@ jobs:
         # replace version name
         sed -i "s/${cask_version}/${latest_version}/g" "./Casks/${CASK_ID}.rb"
     - name: Create Pull Request
-      uses: peter-evans/create-pull-request@v5
+      uses: peter-evans/create-pull-request@v6
       if: env.latest_version != env.cask_version
       with:
         delete-branch: true
