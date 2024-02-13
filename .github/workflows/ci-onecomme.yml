@@ -1,4 +1,4 @@
-name: test of install
+name: test of install(onecomme)
 
 on:
   pull_request:
@@ -12,3 +12,9 @@ jobs:
       uses: actions/checkout@v4
     - name: Tap Repo
       run: brew tap legnoh/etc
+    - name: Change branch
+      run: |
+          cd /opt/homebrew/Library/Taps/legnoh/homebrew-etc
+          git switch ${GITHUB_REF_NAME}
+    - name: install test
+      run: brew install onecomme
