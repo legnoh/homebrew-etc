@@ -1,4 +1,4 @@
-name: Check Update(onecomme)
+name: test of install
 
 on:
   pull_request:
@@ -10,5 +10,5 @@ jobs:
     steps:
     - name: Check Out Repo
       uses: actions/checkout@v4
-    - name: tap Repo
+    - name: Tap Repo
       run: brew tap legnoh/etc
