@@ -1,5 +1,5 @@
 cask 'onecomme' do
-    version "5.1.0"
+    version "5.1.1"
     sha256 :no_check
 
     url "https://storage.onecomme.com/OneCommeSetup-#{version}.pkg"
