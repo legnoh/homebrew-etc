@@ -1,0 +1,14 @@
+name: Check Update(onecomme)
+
+on:
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: macos-13-xlarge # pagefind not working on x64 architecture
+    steps:
+    - name: Check Out Repo
+      uses: actions/checkout@v4
+    - name: tap Repo
+      run: brew tap legnoh/etc
