@@ -9,7 +9,7 @@ class Gchls < Formula
     license "MIT"
   
     on_macos do
-        url "https://github.com/legnoh/gchls/releases/download/v#{version}/gchls-#{version}.tar.gz"
+        url "https://github.com/legnoh/gchls/releases/download/v#{version}/gchls-v#{version}.tar.gz"
   
         def install
           bin.install "gchls"
