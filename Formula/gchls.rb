@@ -5,7 +5,7 @@
 class Gchls < Formula
     desc "This app provides greenchannel stream url."
     homepage "https://github.com/legnoh/gchls"
-    version "1.0.0"
+    version "1.0.1"
     license "MIT"
   
     on_macos do
