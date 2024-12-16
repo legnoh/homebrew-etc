@@ -5,7 +5,7 @@ cask "roland-bridge-cast-app" do
     url "https://static.roland.com/assets/media/zip/bridgecast_app_m#{version.delete(".")}.zip"
     name "Roland Bridge Cast App"
     desc "Roland Bridge Cast App"
-    homepage "https://www.roland.com/jp/support/by_product/bridge_cast_x/updates_drivers/87c7062a-9baf-4dcd-9233-b1c7b322385e/"
+    homepage "https://www.roland.com/jp/support/by_product/bridge_cast_x/updates_drivers/"
   
     depends_on macos: ">= :big_sur"
 
