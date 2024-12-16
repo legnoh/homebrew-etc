@@ -1,12 +1,12 @@
 cask "roland-bridge-cast-app" do
-    version "4.02"
-    sha256 "1afda64ba745f50afd221a1163258534c340e753c2c9c1012bbfd43fcf39170d"
+    version "4.03"
+    sha256 "ef8dab6fc1cc53d116491449c19c1d7f6f17d1f36c37963b36f0fa3aea7f42b5"
   
-    url "https://static.roland.com/assets/media/zip/bridgecast_app_m402.zip"
+    url "https://static.roland.com/assets/media/zip/bridgecast_app_m#{version.delete(".")}.zip"
     name "Bridge Cast App"
     name "Roland Bridge Cast App"
     desc "Roland Bridge Cast App"
-    homepage "https://www.roland.com/jp/support/by_product/bridge_cast_x/updates_drivers/24503dd4-cbbd-4e08-9503-7264cbd1fd64/"
+    homepage "https://www.roland.com/jp/support/by_product/bridge_cast_x/updates_drivers/87c7062a-9baf-4dcd-9233-b1c7b322385e/"
   
     depends_on macos: ">= :big_sur"
 
