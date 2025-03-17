@@ -6,21 +6,21 @@ class HapNatureRemo < Formula
   desc "This app provides homekit virtual devices defined by Nature Remo.
 "
   homepage "https://github.com/legnoh/hap-nature-remo"
-  version "0.0.39"
+  version "0.0.40"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/legnoh/hap-nature-remo/releases/download/0.0.39/hap-nature-remo_0.0.39_darwin_amd64.tar.gz"
-      sha256 "323487a5cb6454e17e9e7ca8e7ec511efe2a37e83217f6af21e44cbdfd19d947"
+      url "https://github.com/legnoh/hap-nature-remo/releases/download/0.0.40/hap-nature-remo_0.0.40_darwin_amd64.tar.gz"
+      sha256 "dc5ab44811744f965cc369e894883cd323fd06730b94c9292f006a7a7a9b16c0"
 
       def install
         bin.install "hap-nature-remo"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/legnoh/hap-nature-remo/releases/download/0.0.39/hap-nature-remo_0.0.39_darwin_arm64.tar.gz"
-      sha256 "cb98e46115abe08a7c4d9a8aa1b31c6fc1866b8ddd3b2ee4695adadb18ae3d27"
+      url "https://github.com/legnoh/hap-nature-remo/releases/download/0.0.40/hap-nature-remo_0.0.40_darwin_arm64.tar.gz"
+      sha256 "164b69235533dd38d27a3681aa4aa0348e994d97130a0867c881c64a2ca5dd90"
 
       def install
         bin.install "hap-nature-remo"
@@ -31,8 +31,8 @@ class HapNatureRemo < Formula
   on_linux do
     if Hardware::CPU.intel?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/legnoh/hap-nature-remo/releases/download/0.0.39/hap-nature-remo_0.0.39_linux_amd64.tar.gz"
-        sha256 "e41790175b30c3f2edfb97557c2da197b9a723ff4aa85bc4e4ae4888f21508c8"
+        url "https://github.com/legnoh/hap-nature-remo/releases/download/0.0.40/hap-nature-remo_0.0.40_linux_amd64.tar.gz"
+        sha256 "e1926805172c53b01794c38f57d9bb089f9cb54092c7b39463c9dd8c884cccb3"
 
         def install
           bin.install "hap-nature-remo"
@@ -41,8 +41,8 @@ class HapNatureRemo < Formula
     end
     if Hardware::CPU.arm?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/legnoh/hap-nature-remo/releases/download/0.0.39/hap-nature-remo_0.0.39_linux_arm64.tar.gz"
-        sha256 "0646bf33ba136be9a673815390571d4438f2a98d32af0a536127b3646f4a1c2c"
+        url "https://github.com/legnoh/hap-nature-remo/releases/download/0.0.40/hap-nature-remo_0.0.40_linux_arm64.tar.gz"
+        sha256 "ba434d5f12ef137cffda2f0340a02cf797da823f6687c914b1c5a253aa365964"
 
         def install
           bin.install "hap-nature-remo"
