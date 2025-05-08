@@ -7,23 +7,23 @@ class RemindersExporter < Formula
 
 "
   homepage "https://github.com/legnoh/reminders-exporter"
-  version "1.0.13"
+  version "1.0.14"
   license "MIT"
 
   depends_on "reminders-cli" if OS.mac?
   depends_on :macos
 
   if Hardware::CPU.intel?
-    url "https://github.com/legnoh/reminders-exporter/releases/download/1.0.13/reminders-exporter_1.0.13_darwin_amd64.tar.gz"
-    sha256 "51d44d4f7325e3ca4c754c4a48a36f7e7afec949b134b421bc67a9beaeb6bf32"
+    url "https://github.com/legnoh/reminders-exporter/releases/download/1.0.14/reminders-exporter_1.0.14_darwin_amd64.tar.gz"
+    sha256 "7be502437069be5754db61b49ce321d8191a42b5c0215495355302166efae4e9"
 
     def install
       bin.install "reminders-exporter"
     end
   end
   if Hardware::CPU.arm?
-    url "https://github.com/legnoh/reminders-exporter/releases/download/1.0.13/reminders-exporter_1.0.13_darwin_arm64.tar.gz"
-    sha256 "13bc06263a530df5b80fc9f080496111a86d619ebaa9282f5e66af992c183dfc"
+    url "https://github.com/legnoh/reminders-exporter/releases/download/1.0.14/reminders-exporter_1.0.14_darwin_arm64.tar.gz"
+    sha256 "39885e79de743e060b9a50d2fa6bbd881af6d64802ff4b13faeb257bc31cb3b1"
 
     def install
       bin.install "reminders-exporter"
