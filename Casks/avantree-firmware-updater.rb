@@ -3,9 +3,9 @@ cask "avantree-firmware-updater" do
     sha256 :no_check
   
     url "https://dfu-data.avantree.com/avantronics/desktop/version/Avantree%20Upgrade%20Tool.pkg"
-    name "Roland Bridge Cast App"
-    desc "Roland Bridge Cast App"
-    homepage "https://www.roland.com/jp/support/by_product/bridge_cast_x/updates_drivers/"
+    name "Avantree Firmware Updater"
+    desc "Avantree Firmware Updater"
+    homepage "https://avantree.com/pages/firmware-updates/9798097109285"
   
     depends_on macos: ">= :big_sur"
 
