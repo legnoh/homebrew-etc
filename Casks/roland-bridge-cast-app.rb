@@ -1,6 +1,6 @@
 cask "roland-bridge-cast-app" do
-    version "4.03"
-    sha256 "ef8dab6fc1cc53d116491449c19c1d7f6f17d1f36c37963b36f0fa3aea7f42b5"
+    version "5.00"
+    sha256 "4a06bac48152318952421fcdaf51fac33664e6ceacfa940a675e60b5ba463ac1"
   
     url "https://static.roland.com/assets/media/zip/bridgecast_app_m#{version.delete(".")}.zip"
     name "Roland Bridge Cast App"
