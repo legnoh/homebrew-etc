@@ -7,23 +7,23 @@ class AppleCalendarServer < Formula
 
 "
   homepage "https://github.com/legnoh/apple-calendar-server"
-  version "0.0.5"
+  version "0.0.6"
   license "MIT"
 
   depends_on "apple-calendar-cli" if OS.mac?
   depends_on :macos
 
   if Hardware::CPU.intel?
-    url "https://github.com/legnoh/apple-calendar-server/releases/download/0.0.5/apple-calendar-server_0.0.5_darwin_amd64.tar.gz"
-    sha256 "08f74eef6abcf1b5ce0f238eb0afe9f640e888b481bf94fec26666d21e368741"
+    url "https://github.com/legnoh/apple-calendar-server/releases/download/0.0.6/apple-calendar-server_0.0.6_darwin_amd64.tar.gz"
+    sha256 "0d325accb334f33d313845364e54ed6bb41b1eeedc6ea9d20bbaa10f2a05990c"
 
     def install
       bin.install "apple-calendar-server"
     end
   end
   if Hardware::CPU.arm?
-    url "https://github.com/legnoh/apple-calendar-server/releases/download/0.0.5/apple-calendar-server_0.0.5_darwin_arm64.tar.gz"
-    sha256 "0f421cd5cb6b69f51b5e31d74b930139dd32acd01208844b95430a9c30d6d9b1"
+    url "https://github.com/legnoh/apple-calendar-server/releases/download/0.0.6/apple-calendar-server_0.0.6_darwin_arm64.tar.gz"
+    sha256 "de67a94ddc76a5afc6003f75a9920d6c10aa0fa617f4642314b4d36b3a0b99d2"
 
     def install
       bin.install "apple-calendar-server"
