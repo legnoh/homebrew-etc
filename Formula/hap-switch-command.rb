@@ -6,21 +6,21 @@ class HapSwitchCommand < Formula
   desc "This app provides homekit virtual switch devices executing local commands.
 "
   homepage "https://github.com/legnoh/hap-switch-command"
-  version "0.0.56"
+  version "0.0.57"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/legnoh/hap-switch-command/releases/download/0.0.56/hap-switch-command_0.0.56_darwin_amd64.tar.gz"
-      sha256 "c1f9d3a577b7591ae1b106458eb43ddb4bad48d86bd9433276f08706e0ecd24a"
+      url "https://github.com/legnoh/hap-switch-command/releases/download/0.0.57/hap-switch-command_0.0.57_darwin_amd64.tar.gz"
+      sha256 "e3960c670521c705030992ca2af94414868e089c5025bfe4629d1353ebf6900f"
 
       def install
         bin.install "hap-switch-command"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/legnoh/hap-switch-command/releases/download/0.0.56/hap-switch-command_0.0.56_darwin_arm64.tar.gz"
-      sha256 "c8927ae33731e0f1b95e0b8254f88ef8ae1ffff2d0a529385743c385a78ef346"
+      url "https://github.com/legnoh/hap-switch-command/releases/download/0.0.57/hap-switch-command_0.0.57_darwin_arm64.tar.gz"
+      sha256 "428a5b3540cdabe5a3d131018db677256f66e89ef2a65786ba59480415eb29a7"
 
       def install
         bin.install "hap-switch-command"
@@ -30,15 +30,15 @@ class HapSwitchCommand < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/legnoh/hap-switch-command/releases/download/0.0.56/hap-switch-command_0.0.56_linux_amd64.tar.gz"
-      sha256 "29345487aea5a37255f3db802a411d54aaa3e61733d1ad5d92b64506d5ee98d3"
+      url "https://github.com/legnoh/hap-switch-command/releases/download/0.0.57/hap-switch-command_0.0.57_linux_amd64.tar.gz"
+      sha256 "37ea29610bddf8da97d413a761902086e8e9a71fcc9a410bad981a897f3ef686"
       def install
         bin.install "hap-switch-command"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/legnoh/hap-switch-command/releases/download/0.0.56/hap-switch-command_0.0.56_linux_arm64.tar.gz"
-      sha256 "5c4eff5ca87e3abbd3ff0b10e8f0a0a6b07fb363e18e63c2bd0284fd4e65ee6c"
+      url "https://github.com/legnoh/hap-switch-command/releases/download/0.0.57/hap-switch-command_0.0.57_linux_arm64.tar.gz"
+      sha256 "dde9daeaced5669239dcc0053089f809015db37d272f198019130ddd6b2e3285"
       def install
         bin.install "hap-switch-command"
       end
