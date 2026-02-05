@@ -1,6 +1,6 @@
 cask "dell-u4025qw-firmware-update-utility" do
-    version "M3T103"
-    sha256 "64a84d09793c4519216c2eb677e098367769cd33309b24b0d1594f681992330a"
+    version "M3T105"
+    sha256 "007b5447d1da8f063dd0f8367c2ba761e3e8b61e41ba50fcb52ae74946d2e645"
   
     url "https://dl.dell.com/FOLDER12227702M/1/Dell_U4025QW_FWUpdate_#{version}_Mac.pkg"
     name "Firmware Update Package for U4025QW monitor."
