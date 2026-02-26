@@ -7,21 +7,21 @@ class GoogleCalendarIcsFixer < Formula
 
 "
   homepage "https://github.com/legnoh/google-calendar-ics-fixer"
-  version "0.0.2"
+  version "0.0.3"
   license "MIT"
   depends_on :macos
 
   if Hardware::CPU.intel?
-    url "https://github.com/legnoh/google-calendar-ics-fixer/releases/download/0.0.2/google-calendar-ics-fixer_0.0.2_darwin_amd64.tar.gz"
-    sha256 "4dfffe62ddaf813032e85c176ca5e17f6f2cdbc33efb529cf1174fbb51d34850"
+    url "https://github.com/legnoh/google-calendar-ics-fixer/releases/download/0.0.3/google-calendar-ics-fixer_0.0.3_darwin_amd64.tar.gz"
+    sha256 "555075c3a35851c7f5f5499b457a7deabafd85c0b91bd00c972d8feae49382b4"
 
     define_method(:install) do
       bin.install "google-calendar-ics-fixer"
     end
   end
   if Hardware::CPU.arm?
-    url "https://github.com/legnoh/google-calendar-ics-fixer/releases/download/0.0.2/google-calendar-ics-fixer_0.0.2_darwin_arm64.tar.gz"
-    sha256 "02bcdd79392a0fd56e9afd4b5a777f5a65b7890f7f759887270ece7a45ba8576"
+    url "https://github.com/legnoh/google-calendar-ics-fixer/releases/download/0.0.3/google-calendar-ics-fixer_0.0.3_darwin_arm64.tar.gz"
+    sha256 "44c220e3e11f7b2be54ca20b495eedbdc40cfa4a4af2aa84f22f93da4051f408"
 
     define_method(:install) do
       bin.install "google-calendar-ics-fixer"
