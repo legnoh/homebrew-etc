@@ -1,7 +1,7 @@
 class GrafanaKiosk < Formula
   desc "The utility to quickly standup a kiosk on devices like a Raspberry Pi or NUC."
   homepage "https://github.com/grafana/grafana-kiosk"
-  version "1.0.6"
+  version "1.0.7"
   license "Apache-2.0"
 
   if OS.mac?
