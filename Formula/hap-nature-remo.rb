@@ -6,21 +6,21 @@ class HapNatureRemo < Formula
   desc "This app provides homekit virtual devices defined by Nature Remo.
 "
   homepage "https://github.com/legnoh/hap-nature-remo"
-  version "0.0.75"
+  version "0.0.76"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/legnoh/hap-nature-remo/releases/download/0.0.75/hap-nature-remo_0.0.75_darwin_amd64.tar.gz"
-      sha256 "f7d3a0e18599e6c950d6b04429937647a053a6f1997fcbdf2a31dd228873d492"
+      url "https://github.com/legnoh/hap-nature-remo/releases/download/0.0.76/hap-nature-remo_0.0.76_darwin_amd64.tar.gz"
+      sha256 "242710aa630fc4a2d6b32e19449f3d7a65af4258dd90fb6a2537e95b1d370f8e"
 
       define_method(:install) do
         bin.install "hap-nature-remo"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/legnoh/hap-nature-remo/releases/download/0.0.75/hap-nature-remo_0.0.75_darwin_arm64.tar.gz"
-      sha256 "d7d97b278bc6d27e477270b374b333b2addf9f35fae727fd437022af29785d68"
+      url "https://github.com/legnoh/hap-nature-remo/releases/download/0.0.76/hap-nature-remo_0.0.76_darwin_arm64.tar.gz"
+      sha256 "ab5f646f4ea768f7109c059d070ecfc9a92e46ab22817188eb6ad886f89ce0ab"
 
       define_method(:install) do
         bin.install "hap-nature-remo"
@@ -30,15 +30,15 @@ class HapNatureRemo < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/legnoh/hap-nature-remo/releases/download/0.0.75/hap-nature-remo_0.0.75_linux_amd64.tar.gz"
-      sha256 "32063bc4c9f7a1c7837dbe8a453bbb71a8dd4cb74b499e48d7efa88546ebc0e5"
+      url "https://github.com/legnoh/hap-nature-remo/releases/download/0.0.76/hap-nature-remo_0.0.76_linux_amd64.tar.gz"
+      sha256 "114adfae28738dcc1fbc99ef92ddd28b0f745f32d2b1586497506c1258b26266"
       define_method(:install) do
         bin.install "hap-nature-remo"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/legnoh/hap-nature-remo/releases/download/0.0.75/hap-nature-remo_0.0.75_linux_arm64.tar.gz"
-      sha256 "d014f3baca766d207c6a7d923958668006b46756e4d8b74e87c10263acb7e0fd"
+      url "https://github.com/legnoh/hap-nature-remo/releases/download/0.0.76/hap-nature-remo_0.0.76_linux_arm64.tar.gz"
+      sha256 "011a0e5dfe87c07c788043953a768ea1e52f9dd22c0b57689fe1332bf311495e"
       define_method(:install) do
         bin.install "hap-nature-remo"
       end
