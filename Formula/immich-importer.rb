@@ -6,21 +6,21 @@ class ImmichImporter < Formula
   desc "This app is a daemon that converts Reminders.app data into metrics in Prometheus Exporter format and provides them.
 "
   homepage "https://github.com/legnoh/immich-importer"
-  version "0.0.5"
+  version "0.0.6"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/legnoh/immich-importer/releases/download/0.0.5/immich-importer_0.0.5_darwin_amd64.tar.gz"
-      sha256 "72a35af87af394db59b5ac067b5c2cd6bbba6ecd1aa748fe901ba4081eaf0d25"
+      url "https://github.com/legnoh/immich-importer/releases/download/0.0.6/immich-importer_0.0.6_darwin_amd64.tar.gz"
+      sha256 "bf1bcc753f6ee535349522c1ce39a0fe87caeb189de4690d0ce827cc3ae959ca"
 
       define_method(:install) do
         bin.install "immich-importer"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/legnoh/immich-importer/releases/download/0.0.5/immich-importer_0.0.5_darwin_arm64.tar.gz"
-      sha256 "4a6d20271627bd2c200b2cd3fe7a6c71511e1467a9ad96bfa91c989962adac43"
+      url "https://github.com/legnoh/immich-importer/releases/download/0.0.6/immich-importer_0.0.6_darwin_arm64.tar.gz"
+      sha256 "11eada1a4116b78613c3c20a39e6e41f0c239498d98836b4e09c60f4f53f461b"
 
       define_method(:install) do
         bin.install "immich-importer"
@@ -30,15 +30,15 @@ class ImmichImporter < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/legnoh/immich-importer/releases/download/0.0.5/immich-importer_0.0.5_linux_amd64.tar.gz"
-      sha256 "c5ed740a188e061341a4124d66e1af3d9f0d7ffdb8d9cf88c8369473e21819bf"
+      url "https://github.com/legnoh/immich-importer/releases/download/0.0.6/immich-importer_0.0.6_linux_amd64.tar.gz"
+      sha256 "c378c8bda0cf340fe39f01d0244bb480ea4c4a26792ccf4ff155eee3165d8392"
       define_method(:install) do
         bin.install "immich-importer"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/legnoh/immich-importer/releases/download/0.0.5/immich-importer_0.0.5_linux_arm64.tar.gz"
-      sha256 "d6e28cdec6956bce5e4f303aa6b3e09c4ec69732becdf5335379ce457a4773fc"
+      url "https://github.com/legnoh/immich-importer/releases/download/0.0.6/immich-importer_0.0.6_linux_arm64.tar.gz"
+      sha256 "5b3eb7d4210736468f77463ae928915dd604d01afa390a32db7bc43804b9058c"
       define_method(:install) do
         bin.install "immich-importer"
       end
