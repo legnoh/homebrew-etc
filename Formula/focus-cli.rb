@@ -6,21 +6,21 @@ class FocusCli < Formula
   desc "Get macOS Focus mode via CLI
 "
   homepage "https://github.com/legnoh/focus-cli"
-  version "0.0.36"
+  version "0.0.37"
   license "MIT"
   depends_on :macos
 
   if Hardware::CPU.intel?
-    url "https://github.com/legnoh/focus-cli/releases/download/0.0.36/focus-cli_0.0.36_darwin_amd64.tar.gz"
-    sha256 "de338cbe4458f60e5de24c3cc0f10ad639c0702427f5249cf2fc27a973bd6b53"
+    url "https://github.com/legnoh/focus-cli/releases/download/0.0.37/focus-cli_0.0.37_darwin_amd64.tar.gz"
+    sha256 "8e790be188492369c13e6e3225318e9be4376dcbffd7b9f118f77ff3f8af5547"
 
     define_method(:install) do
       bin.install "focus"
     end
   end
   if Hardware::CPU.arm?
-    url "https://github.com/legnoh/focus-cli/releases/download/0.0.36/focus-cli_0.0.36_darwin_arm64.tar.gz"
-    sha256 "3208836869fd02b085840967956e285852afe61ad24d618564b596c72e0d01ba"
+    url "https://github.com/legnoh/focus-cli/releases/download/0.0.37/focus-cli_0.0.37_darwin_arm64.tar.gz"
+    sha256 "86f6cfab6faa1f9e73afcb4c60d8c0573fb813e3b2877c4a1df64c78841eb5c1"
 
     define_method(:install) do
       bin.install "focus"
