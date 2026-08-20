@@ -7,23 +7,23 @@ class AppleCalendarServer < Formula
 
 "
   homepage "https://github.com/legnoh/apple-calendar-server"
-  version "0.0.24"
+  version "0.0.25"
   license "MIT"
 
   depends_on "apple-calendar-cli" if OS.mac?
   depends_on :macos
 
   if Hardware::CPU.intel?
-    url "https://github.com/legnoh/apple-calendar-server/releases/download/0.0.24/apple-calendar-server_0.0.24_darwin_amd64.tar.gz"
-    sha256 "8cc000d44cdc6f71c460a89e00f653c98c280df89a9364525260371a9e28a840"
+    url "https://github.com/legnoh/apple-calendar-server/releases/download/0.0.25/apple-calendar-server_0.0.25_darwin_amd64.tar.gz"
+    sha256 "0e4762c576382953e1234437992d08a2cc2c8c33f15bbc8dbb48bd7f2486847a"
 
     define_method(:install) do
       bin.install "apple-calendar-server"
     end
   end
   if Hardware::CPU.arm?
-    url "https://github.com/legnoh/apple-calendar-server/releases/download/0.0.24/apple-calendar-server_0.0.24_darwin_arm64.tar.gz"
-    sha256 "8347b0a8a6356defbacb75f27705e6c96e69ef85ca9f0a38b08151dbecaac65e"
+    url "https://github.com/legnoh/apple-calendar-server/releases/download/0.0.25/apple-calendar-server_0.0.25_darwin_arm64.tar.gz"
+    sha256 "bfc2f3aabe6cfd16e6bc89326bd2f93e7e101db8b6c4952a21101c1fe7a79e7e"
 
     define_method(:install) do
       bin.install "apple-calendar-server"
