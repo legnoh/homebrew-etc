@@ -5,23 +5,23 @@
 class RemindersExporter < Formula
   desc "This app is a daemon that converts Reminders.app data into metrics in Prometheus Exporter format and provides them.\n\n"
   homepage "https://github.com/legnoh/reminders-exporter"
-  version "1.0.52"
+  version "1.0.53"
   license "MIT"
 
   depends_on "reminders-cli" if OS.mac?
   depends_on :macos
 
   if Hardware::CPU.intel?
-    url "https://github.com/legnoh/reminders-exporter/releases/download/1.0.52/reminders-exporter_1.0.52_darwin_amd64.tar.gz"
-    sha256 "a0607e316c960b8fe926b7b2ca517cbcf7bdcf61a882225a0a5425803f312ab8"
+    url "https://github.com/legnoh/reminders-exporter/releases/download/1.0.53/reminders-exporter_1.0.53_darwin_amd64.tar.gz"
+    sha256 "b4b13c4003eded1502e3262fce4617c09d5ceb9d0fabc12be50a81e04eab8bf7"
 
     define_method(:install) do
       bin.install "reminders-exporter"
     end
   end
   if Hardware::CPU.arm?
-    url "https://github.com/legnoh/reminders-exporter/releases/download/1.0.52/reminders-exporter_1.0.52_darwin_arm64.tar.gz"
-    sha256 "6532585d4b1e4b50b115d2c1fc621aa06cf318ae22d6b9803c66a522d3d80bfe"
+    url "https://github.com/legnoh/reminders-exporter/releases/download/1.0.53/reminders-exporter_1.0.53_darwin_arm64.tar.gz"
+    sha256 "59fa37b4067be7a88d5414149c4aaf10de6787adbee47ca8f525669c10033294"
 
     define_method(:install) do
       bin.install "reminders-exporter"
